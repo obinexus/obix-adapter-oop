@@ -1,0 +1,47 @@
+{
+  "package": "obix-adapter-oop",
+  "dir": "core/obix-adapter-oop",
+  "importedBy": "scripts/recovery/generate-shims.mjs",
+  "stage": "stage-7 compat shim (authored-in-recovery; no upstream code)",
+  "replaces": {
+    "name": "@obinexusltd/obix-adapter-oop",
+    "source": "npm:@obinexusltd/obix-adapter-oop@0.3.0",
+    "integrity": "sha512-uuB9aZwyW+oNNRGkuVGTdOSZF4wZLU9v93fcBdHNmVVbmRponxTfLDmbqrTJIhu08A5rpUTP/M+/4kW3NXKmCA=="
+  },
+  "owner": "obix-core-oop",
+  "surface": "docs/recovery/shim-surface.json",
+  "decision": "rename (docs/recovery/migration-table.md; obix-naming.json legacyShims, kind published)",
+  "entries": {
+    ".": {
+      "values": 1,
+      "types": 2,
+      "removed": [],
+      "missingTypes": [
+        "ActionContext",
+        "ActionFn",
+        "ActionTrace",
+        "DOPComponent",
+        "EffectDescriptor",
+        "RenderView",
+        "ValidationResult"
+      ]
+    }
+  },
+  "localFixes": [],
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-adapter-oop",
+      "dir": "core/obix-adapter-oop",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-adapter-oop, current name obix-adapter-oop (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "core/obix-adapter-oop",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
